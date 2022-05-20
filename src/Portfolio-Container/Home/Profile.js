@@ -2,7 +2,7 @@ import React from 'react';
 import TypeAnimation from 'react-type-animation';
 import './Profile.css';
 
-export default function Profile(props) {
+function Profile(props) {
 	return (
 		<div className='profile-container'>
 			<div className='profile-parent'>
@@ -10,27 +10,27 @@ export default function Profile(props) {
 					<div className='colz'>
 						<div className='colz-icon'>
 							<a href='#'>
-								<i className='fa fa-linkedin-square'></i>
+								<i className='fa fa-linkedin-square fa-2x'></i>
 							</a>
 							<a href='#'>
-								<i className='fa fa-github-square'></i>
+								<i className='fa fa-github-square fa-2x'></i>
 							</a>
 						</div>
 					</div>
 					<div className='profile-details-name'>
 						<span className='primary-text'>
-							{' '}
-							Hello, I'm <span className='highlighted-text'>Christian</span>
+							<p>Hello, I'm</p>
+						</span>
+						<span className='highlighted-text'>
+							<p>Christian</p>
 						</span>
 					</div>
 					<div className='profile-details-role'>
-						<span className='primary-text'>
-							{' '}
+						<span className='type-animation'>
 							<h1>
 								{' '}
 								<TypeAnimation
 									cursor={true}
-									wrapper='h1'
 									repeat={Infinity}
 									sequence={[
 										'Junior Web Developer',
@@ -70,3 +70,5 @@ export default function Profile(props) {
 		</div>
 	);
 }
+
+export default Profile;
