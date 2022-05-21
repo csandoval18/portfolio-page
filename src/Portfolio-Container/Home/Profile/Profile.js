@@ -58,7 +58,7 @@ function Profile(props) {
 					<div className='profile-optins'>
 						<button className='btn primary-btn'>
 							{''}
-							Hire Me{' '}
+							Contact Me{' '}
 						</button>
 						<a href='Resume.pdf' download='CAS_Resume.pdf'>
 							<button className='btn highlighted-btn'>Get Resume</button>
