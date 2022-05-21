@@ -5,7 +5,7 @@
 	justify-content: center;
 	height: 30%;
 	min-height: fit-content;
-	background-image: url('../../assets/Home/bg.jpg');
+	background-image: url('../../../assets/Home/bg.jpg');
 }
 
 .profile-parent {
@@ -64,7 +64,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 2px 0px 0px rgb(80, 240, 187);
+	/* box-shadow: 0 2px 0px 0px rgb(80, 240, 187); */
+	box-shadow: 0 2px 0px 0px #82a8ee;
 	border-radius: 6%;
 	height: 380px;
 	width: 380px;
@@ -74,7 +75,7 @@
 .profile-picture-background {
 	height: 92%;
 	width: 92%;
-	background-image: url('../../assets/Home/profilephoto.jpg');
+	background-image: url('../../../assets/Home/profilephoto.jpg');
 	background-size: cover;
 	border-radius: 6%;
 	background-repeat: no-repeat;
