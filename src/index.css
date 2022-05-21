@@ -93,7 +93,7 @@ body ::-webkit-scrollbar-thumb {
 }
 
 .btn:active {
-	transform: translateY(2px);
+	transform: translateY(3px);
 }
 
 .primary-btn {
@@ -106,7 +106,7 @@ body ::-webkit-scrollbar-thumb {
 
 .primary-btn::before {
 	content: '';
-	border-radius: 50px;
+	border-radius: 18px;
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -117,21 +117,29 @@ body ::-webkit-scrollbar-thumb {
 	transform: scaleX(0);
 }
 
-.primary-btn:hover:before {
+.primary-btn:hover::before {
 	transition: 0.5s all ease;
 	left: 0;
 	right: 0;
 	opacity: 1;
 	z-index: -1;
+	transform: scaleX(1);
 }
 
-.primary-btn:hover::before {
-	transform: scaleX(1);
+.primary-btn:hover::after {
+	transition: 0.5s all ease;
+	left: -50%;
+	right: -50%;
+	opacity: 1;
+	z-index: 1;
+	transform: scale(1);
 }
 
 .primary-btn:hover {
 	color: aliceblue;
+	/* border: 2px solid #82a8ee; */
 	border: 2px solid #82a8ee;
+	z-index: 1;
 }
 
 .highlighted-btn {
@@ -142,14 +150,6 @@ body ::-webkit-scrollbar-thumb {
 	box-shadow: inset 0 0 0 0 aliceblue;
 	transition: ease-out 0.5s;
 }
-
-/* .highlighted-btn:hover:before {
-	transition: 1.2s all ease;
-	left: 0;
-	right: 0;
-	opacity: 1;
-	z-index: -1;
-} */
 
 .highlighted-btn:hover {
 	box-shadow: inset 160px 0 0 0 aliceblue;
