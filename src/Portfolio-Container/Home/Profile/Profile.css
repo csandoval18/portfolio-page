@@ -6,6 +6,7 @@
 	height: 30%;
 	min-height: fit-content;
 	background-image: url('../../../assets/Home/bg.jpg');
+	margin: 0 20px;
 }
 
 .profile-parent {
@@ -52,8 +53,12 @@
 
 .profile-role-tagline {
 	font-size: 15px;
-	margin: 5px 0 0 0;
+	/* margin: 0 40px 0 40px; */
 	font-family: 'Poppins Light';
+}
+
+.profile-role-tagline p {
+	width: 500px;
 }
 
 .profile-optins {
@@ -176,5 +181,14 @@ i {
 	.profile-optins,
 	.profile-detail-role {
 		text-align: center;
+	}
+
+	.type-animation h1 {
+		height: 96px;
+	}
+
+	.profile-role-tagline p {
+		width: fit-content;
+		margin-left: 2px;
 	}
 }

@@ -9,10 +9,10 @@ function Profile(props) {
 				<div className='profile-details'>
 					<div className='colz'>
 						<div className='colz-icon'>
-							<a href='#'>
+							<a href='https://www.linkedin.com/in/christian-a-2151011b9/'>
 								<i className='fa fa-linkedin-square fa-2x'></i>
 							</a>
-							<a href='#'>
+							<a href='https://github.com/csandoval18'>
 								<i className='fa fa-github-square fa-2x'></i>
 							</a>
 						</div>
@@ -47,9 +47,11 @@ function Profile(props) {
 								/>
 							</h1>
 							<span className='profile-role-tagline'>
-								University of Wisconsin - Whitewater graduate majoring in
-								Computer Science<br></br>with experience building applications
-								with front end and back end operations.
+								<p>
+									University of Wisconsin - Whitewater graduate majoring in
+									Computer Science with experience building applications with
+									front end and back end operations.
+								</p>
 							</span>
 						</span>
 					</div>
