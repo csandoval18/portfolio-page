@@ -1,4 +1,4 @@
-import { TOTAL_SCREENS } from './commonUtils';
+import { TOTAL_SCREENS } from './CommonUtils';
 import { Subject } from 'rxjs';
 
 export default class ScrollService {
