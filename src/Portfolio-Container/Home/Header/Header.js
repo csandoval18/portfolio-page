@@ -39,7 +39,7 @@ function Header(props) {
 		if (selectedScreen === index) {
 			classes += 'selected-header-option';
 		}
-		return;
+		return classes;
 	};
 	const switchScreen = (index, screen) => {
 		let screenComponent = document.getElementById(screen.screen_name);
@@ -67,7 +67,7 @@ function Header(props) {
 					<div
 						className={
 							showHeaderOptions
-								? 'header-option show-hamburger-option'
+								? 'header-options show-hamburger-option'
 								: 'header-options'
 						}
 					>

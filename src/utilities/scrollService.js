@@ -41,11 +41,12 @@ export default class ScrollService {
 				return false;
 		}
 	};
+
 	checkCurrentScreenUnderViewport = (event) => {
 		if (!event || Object.keys(event).length < 1) return;
 		for (let screen of TOTAL_SCREENS) {
 			let screenFromDOM = document.getElementById(screen.screen_name);
-			if (!screenFromDOM) continue;
+			if (screenFromDOM != null) continue;
 
 			let partiallyVisible = this.isElementInView(screenFromDOM, 'partial');
 			let fullyVisible = this.isElementInView(screenFromDOM, 'complete');
