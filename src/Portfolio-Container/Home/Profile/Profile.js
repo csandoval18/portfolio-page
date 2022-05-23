@@ -19,7 +19,7 @@ function Profile(props) {
 					</div>
 					<div className='profile-details-name'>
 						<span className='primary-text'>
-							<p>Hello, I'm</p>
+							<p>Hey, I'm</p>
 						</span>
 						<span className='highlighted-text'>
 							<p>Christian</p>
@@ -55,13 +55,17 @@ function Profile(props) {
 							</span>
 						</span>
 					</div>
-					<div className='profile-optins'>
+					<div className='profile-options'>
 						<button className='btn primary-btn'>
 							{''}
 							Contact Me{' '}
 						</button>
-						<a href='Resume.pdf' download='CAS_Resume.pdf'>
-							<button className='btn highlighted-btn'>Get Resume</button>
+						<a
+							className='btn highlighted-btn'
+							href='Resume.pdf'
+							download='CAS_Resume.pdf'
+						>
+							Get Resume
 						</a>
 					</div>
 				</div>

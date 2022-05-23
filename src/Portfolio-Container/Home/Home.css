@@ -1,8 +1,29 @@
 .home-container {
-	padding-top: 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	min-height: 670px;
+	height: 700px;
+	width: 100%;
+	background-repeat: no-repeat;
 	background-image: url('../../assets/Home/bg.jpg');
+	background-size: 100% 700px;
+}
+
+@media screen and (max-width: 1700px) {
+	.home-container {
+		background-image: url('../../assets/Home/bg-medium.jpg');
+		z-index: -1;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.home-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-repeat: no-repeat;
+		background-image: url('../../assets/Home/mobile-bg.jpg');
+		background-size: cover;
+		height: 970px;
+	}
 }

@@ -1,0 +1,50 @@
+.header-container {
+	display: flex;
+	justify-content: center;
+	height: 140px;
+	color: aliceblue;
+}
+
+.header-parent {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	width: 70%;
+	color: aliceblue;
+}
+
+.header-logo {
+	font-size: 50px;
+	font-family: 'Poppins ExtraBold';
+	color: aliceblue;
+}
+
+.header-options {
+	display: flex;
+	align-items: center;
+}
+.header-option {
+	font-size: 16px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.header-hamburger {
+	display: none;
+	color: aliceblue;
+}
+
+.header-option-separator {
+	margin: 0 50px 0 0;
+	color: aliceblue;
+}
+
+.selected-header-option {
+	color: #82a8ee;
+}
+@media only screen and (max-width: 1110px) {
+	.header-parent {
+		width: 80%;
+	}
+}

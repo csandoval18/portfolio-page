@@ -100,7 +100,6 @@ body ::-webkit-scrollbar-thumb {
 	color: aliceblue;
 	border: 2px solid linen;
 	font-size: 12px;
-	background-color: #1f2235;
 	margin-right: 20px;
 }
 
@@ -151,16 +150,15 @@ body ::-webkit-scrollbar-thumb {
 	transition: ease-out 0.5s;
 }
 
+.highlighted-btn a {
+	width: 160px !important;
+	height: 44px;
+}
+
 .highlighted-btn:hover {
 	box-shadow: inset 160px 0 0 0 aliceblue;
 	background-color: rgb(252, 252, 252);
 	color: #111;
-}
-
-@media only screen and (max-width: 568px) {
-	.highlighted-btn {
-		z-index: -900;
-	}
 }
 
 .red-border {
