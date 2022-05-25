@@ -23,7 +23,7 @@ export default class ScrollService {
 	};
 
 	isElementInView = (elem, type) => {
-		let rec = elem.getBoundingClientRec();
+		let rec = elem.getBoundingClientRect();
 		let elementTop = rec.top;
 		let elementBottom = rec.bottom;
 
@@ -46,7 +46,7 @@ export default class ScrollService {
 		if (!event || Object.keys(event).length < 1) return;
 		for (let screen of TOTAL_SCREENS) {
 			let screenFromDOM = document.getElementById(screen.screen_name);
-			if (screenFromDOM != null) continue;
+			if (!screenFromDOM) continue;
 
 			let partiallyVisible = this.isElementInView(screenFromDOM, 'partial');
 			let fullyVisible = this.isElementInView(screenFromDOM, 'complete');

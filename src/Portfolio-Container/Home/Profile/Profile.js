@@ -35,13 +35,15 @@ function Profile(props) {
 									sequence={[
 										'Junior Web Developer',
 										1500,
+										'Front-End',
+										1500,
+										'Back-End',
+										1500,
 										'LAMP Stack',
 										1500,
 										'MERN Stack',
 										1500,
-										'Mobile Development',
-										1500,
-										'Flutter + Firebase',
+										'Flutter',
 										1500,
 									]}
 								/>

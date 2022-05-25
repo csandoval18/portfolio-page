@@ -17,8 +17,10 @@ function Header(props) {
 		let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
 		if (screenIndex < 0) return;
 	};
+
 	let currentScreenSubscription =
 		ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScrreen);
+
 	const getHeaderOptions = () => {
 		return TOTAL_SCREENS.map((screen, i) => (
 			<div
@@ -32,15 +34,16 @@ function Header(props) {
 	};
 
 	const getHeaderOptionsClass = (index) => {
-		let classes = 'header-option';
+		let classes = 'header-option' + ' ';
 		if (index < TOTAL_SCREENS.length - 1) {
-			classes += 'header-option-separator';
+			classes += 'header-option-separator' + ' ';
 		}
 		if (selectedScreen === index) {
-			classes += 'selected-header-option';
+			classes += 'selected-header-option' + ' ';
 		}
 		return classes;
 	};
+
 	const switchScreen = (index, screen) => {
 		let screenComponent = document.getElementById(screen.screen_name);
 		if (!screenComponent) return;
@@ -48,11 +51,12 @@ function Header(props) {
 		setSelectedScreen(index);
 		setShowHeaderOptions(false);
 	};
+
 	return (
 		<div>
 			<div
 				className='header-container'
-				onClick={() => setShowHeaderOptions(!showHeaderOptions)}
+				// onClick={() => setShowHeaderOptions(!showHeaderOptions)}
 			>
 				<div className='header-parent'>
 					<div
