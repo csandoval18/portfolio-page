@@ -3,7 +3,8 @@
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-	min-height: fit-content;
+	min-height: 700px;
+	padding-bottom: 180px;
 }
 
 .profile-parent {
