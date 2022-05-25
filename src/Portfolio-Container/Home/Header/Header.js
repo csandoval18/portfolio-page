@@ -21,6 +21,7 @@ function Header(props) {
 	let currentScreenSubscription =
 		ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScrreen);
 
+	//Get all navbar screens to display once navbar option is clicked
 	const getHeaderOptions = () => {
 		return TOTAL_SCREENS.map((screen, i) => (
 			<div
@@ -49,19 +50,21 @@ function Header(props) {
 		if (!screenComponent) return;
 		screenComponent.scrollIntoView({ behavior: 'smooth' });
 		setSelectedScreen(index);
+		//makes navbar disappear after clicking a header option
 		setShowHeaderOptions(false);
+		console.log('showheaderoptions: ' + showHeaderOptions);
 	};
 
 	return (
 		<div>
-			<div
-				className='header-container'
-				// onClick={() => setShowHeaderOptions(!showHeaderOptions)}
-			>
+			<div className='header-container'>
 				<div className='header-parent'>
 					<div
 						className='header-hamburger'
-						onClick={() => setShowHeaderOptions(!showHeaderOptions)}
+						onClick={() => {
+							setShowHeaderOptions(!showHeaderOptions);
+							console.log(showHeaderOptions);
+						}}
 					>
 						<FontAwesomeIcon className='header-hamburger-bars' icon={faBars} />
 					</div>

@@ -65,6 +65,11 @@
 	.about-me-parent {
 		width: 88%;
 	}
+	.about-me-options {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
 
 @media only screen and (max-width: 898px) {
@@ -85,6 +90,9 @@
 
 	.about-me-options .highlighted-btn-dark {
 		margin: 24px 0 0 0 !important;
+	}
+	.about-me-options .primary-btn-dark {
+		margin: 0 !important;
 	}
 	.about-me-options > * {
 		width: 100%;
