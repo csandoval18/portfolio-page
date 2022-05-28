@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ScreenHeading from '../../Utilities/ScreenHeading/ScreenHeading';
 import ScrollService from '../../Utilities/ScrollService';
 import Animations from '../../Utilities/Animations';
+import './Resume.css';
 
 function Resume(props) {
 	const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
@@ -19,22 +20,21 @@ function Resume(props) {
 		return (
 			<div className='resume-heading'>
 				<div className='resume-main-heading'>
-					<div className='heading-bullet'>
-						<span>{props.heading ? props.heading : ''}</span>
-						{props.fromDate && props.toDate ? (
-							<div className='heading-date'>
-								{props.fromDate + '-' + props.toDate}
-							</div>
-						) : (
-							<div></div>
-						)}
-					</div>
-					<div className='resume-sub-heading'>
-						<span>{props.subHeading ? props.subHeading : ''}</span>
-					</div>
-					<div className='resume-heading-description'>
-						<span>{props.description ? props.description : ''}</span>
-					</div>
+					<div className='heading-bullet'></div>
+					<span>{props.heading ? props.heading : ''}</span>
+					{props.fromDate && props.toDate ? (
+						<div className='heading-date'>
+							{props.fromDate + '-' + props.toDate}
+						</div>
+					) : (
+						<div></div>
+					)}
+				</div>
+				<div className='resume-sub-heading'>
+					<span>{props.subHeading ? props.subHeading : ''}</span>
+				</div>
+				<div className='resume-heading-description'>
+					<span>{props.description ? props.description : ''}</span>
 				</div>
 			</div>
 		);
@@ -51,19 +51,20 @@ function Resume(props) {
 	const programmingSkillsDetails = [
 		{ skill: 'HTML', ratingPercentage: 90 },
 		{ skill: 'CSS', ratingPercentage: 80 },
-		{ skill: 'Javascript', ratingPercentage: 85 },
+		{ skill: 'Javascript', ratingPercentage: 90 },
+		{ skill: 'JQuery', ratingPercentage: 75 },
 		{ skill: 'PHP', ratingPercentage: 80 },
-		{ skill: 'Laravel', ratingPercentage: 65 },
+		{ skill: 'Laravel', ratingPercentage: 55 },
 		{ skill: 'SQL', ratingPercentage: 70 },
-		{ skill: 'ReactJS', ratingPercentage: 70 },
+		{ skill: 'ReactJS', ratingPercentage: 75 },
 		{ skill: 'ExpressJS', ratingPercentage: 45 },
-		{ skill: 'MongoDB', ratingPercentage: 45 },
+		{ skill: 'MongoDB', ratingPercentage: 40 },
 		{ skill: 'NodeJS', ratingPercentage: 70 },
 		{ skill: 'Dart', ratingPercentage: 65 },
-		{ skill: 'Flutter', ratingPercentage: 45 },
+		{ skill: 'Flutter', ratingPercentage: 55 },
 		// { skill: '.NET', ratingPercentage: 15 },
 		// { skill: 'C#', ratingPercentage: 55 },
-		{ skill: 'C++', ratingPercentage: 80 },
+		{ skill: 'C++', ratingPercentage: 75 },
 	];
 
 	const projectsDetails = [
@@ -114,22 +115,26 @@ function Resume(props) {
 			/>
 			<div className='experience-description'>
 				<div className='resume-description-text'>
-					<div className='highlight-blob'></div>
+					{/* <div className='highlight-blob'></div> */}
 					<span>
 						Development and maintanance of web applications with HTML, JQuery,
 						and MySQL. The applications were for use of residence hall front
 						desk workers, students, and staff.
 					</span>
 				</div>
+			</div>
+			<div className='experience-description'>
 				<div className='resume-description-text'>
-					<div className='highlight-blob'></div>
+					{/* <div className='highlight-blob'></div> */}
 					<span>
 						Creation and management of uww domain websites for the housing
 						department using Ingeniux CMS.
 					</span>
 				</div>
+			</div>
+			<div className='experience-description'>
 				<div className='resume-description-text'>
-					<div className='highlight-blob'></div>
+					{/* <div className='highlight-blob'></div> */}
 					<span>
 						Troubleshooting problems and aiding students with personal account
 						issues in the campus system.
@@ -144,14 +149,13 @@ function Resume(props) {
 		>
 			{programmingSkillsDetails.map((skill, index) => (
 				<div className='skill-parent' key={index}>
-					<div className='heading-bullet'>
-						<span>{skill.skill}</span>
-						<div className='skill-percentage'>
-							<div
-								className='active-percentage'
-								style={{ width: skill.ratingPercentage + '%' }}
-							></div>
-						</div>
+					<div className='heading-bullet'></div>
+					<span>{skill.skill}</span>
+					<div className='skill-percentage'>
+						<div
+							className='active-percentage'
+							style={{ width: skill.ratingPercentage + '%' }}
+						></div>
 					</div>
 				</div>
 			))}
@@ -171,11 +175,15 @@ function Resume(props) {
 		<div className='resume-screen-container' key='interests'>
 			<ResumeHeading
 				heading='Learning'
-				description='I am always looking forward to learning new programming techonologies and improving my application of algorithms and data structures to solve real world problems.'
+				description='Wether it is in the workplace or in my free time, I am always eager to learn new programming techonologies as well as improving my application of algorithms and data structures to solve real world problems. My professional goal is to gain mastery of these concepts and spread my knowledge to others.'
 			/>
 			<ResumeHeading
 				heading='Music'
-				description='Discovering and listening to music is one of my favorite pass times. Listening to soothing music allows me to relax and reamin focused on my daily tasks.'
+				description='Discovering and listening to music is one of my favorite pass times. Listening to soothing music allows me to relax during stressful times and remain focused on my daily tasks.'
+			/>
+			<ResumeHeading
+				heading='Digital Art'
+				description='I recently gained a passion for digital art and design. In my spare time I really enjoy making custom designs in photoshop and making vector drawings with illustrator.'
 			/>
 		</div>,
 	];
@@ -203,6 +211,7 @@ function Resume(props) {
 					src={require(`../../assets/Resume/${bullet.logoSrc}`)}
 					alt='no internet connection'
 				/>
+				<span className='bullet-label'>{bullet.label}</span>
 			</div>
 		));
 	};
@@ -219,15 +228,14 @@ function Resume(props) {
 	};
 
 	return (
-		<div className='resume-container secreen-container' id={props.id || ''}>
+		<div className='resume-container screen-container' id={props.id || ''}>
 			<div className='resume-content'>
 				<ScreenHeading title={'Resume'} subHeading={'My Details'} />
 				<div className='resume-card'>
 					<div className='resume-bullets'>
 						<div className='bullet-container'>
-							<div className='bullet-icons'>
-								<div className='bullets'>{getBullets()}</div>
-							</div>
+							<div className='bullet-icons'></div>
+							<div className='bullets'>{getBullets()}</div>
 						</div>
 					</div>
 					<div className='resume-bullet-details'>{getResumeScreen()}</div>

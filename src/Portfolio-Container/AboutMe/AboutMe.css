@@ -60,6 +60,11 @@
 	border-radius: 50%;
 }
 
+.about-me-options {
+	/* display: flex; */
+	text-align: center;
+}
+
 /* ipad pro responsiveness */
 @media only screen and (max-width: 1110px) {
 	.about-me-parent {
