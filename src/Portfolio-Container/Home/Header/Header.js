@@ -78,6 +78,7 @@ function Header(props) {
 								: 'header-options'
 						}
 					>
+						<span className='close-header-options'>close</span>
 						{getHeaderOptions()}
 					</div>
 				</div>

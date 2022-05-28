@@ -19,10 +19,10 @@ function Profile(props) {
 					</div>
 					<div className='profile-details-name'>
 						<span className='primary-text'>
-							<p>Hey, I'm</p>
+							<p>Welcome to my</p>
 						</span>
 						<span className='highlighted-text'>
-							<p>Christian</p>
+							<p>Website!</p>
 						</span>
 					</div>
 					<div className='profile-details-role'>
@@ -52,7 +52,7 @@ function Profile(props) {
 								<p>
 									University of Wisconsin - Whitewater graduate majoring in
 									Computer Science with experience building applications with
-									front end and back end operations.
+									front end and back end capabilities.
 								</p>
 							</span>
 						</span>

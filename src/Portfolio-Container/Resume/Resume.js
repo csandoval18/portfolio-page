@@ -71,12 +71,12 @@ function Resume(props) {
 		{
 			title: 'Personal Portfolio Website',
 			duration: { fromDate: '2022', toDate: '2022' },
-			subHeading: 'Technologies Used: ReactJS, HTML, CSS, Bootstrap, Git',
+			subHeading: 'Technologies Used: ReactJS, HTML, CSS',
 			description:
 				'A personal portfolio website used to resume my skills aquired throughout my college education and hone my ReactJS knowledge.',
 		},
 		{
-			title: 'Flutter Student Wellness App',
+			title: 'Student Wellness App',
 			duration: { fromDate: '2022', toDate: '2022' },
 			subHeading: 'Technologies Used: Flutter, Dart, mySQL',
 			description:
@@ -85,9 +85,9 @@ function Resume(props) {
 		{
 			title: 'DBMS Project',
 			duration: { fromDate: '2020', toDate: '2020' },
-			subHeading: 'Technologies Used: PHP, mySQL, HTML, CSS, Bootstrap',
+			subHeading: 'Technologies Used: PHP, mySQL, HTML, CSS',
 			description:
-				'Project developed for Database Management Systems class. Focusing on pagination of data, account handling with cart and wishlists. First website development experience.',
+				'Project developed for DBMS class. Focusing on pagination of data, account handling with cart and wishlists. First website development experience.',
 		},
 	];
 
@@ -117,7 +117,7 @@ function Resume(props) {
 				<div className='resume-description-text'>
 					{/* <div className='highlight-blob'></div> */}
 					<span>
-						Development and maintanance of web applications with HTML, JQuery,
+						- Development and maintanance of web applications with HTML, JQuery,
 						and MySQL. The applications were for use of residence hall front
 						desk workers, students, and staff.
 					</span>
@@ -127,7 +127,7 @@ function Resume(props) {
 				<div className='resume-description-text'>
 					{/* <div className='highlight-blob'></div> */}
 					<span>
-						Creation and management of uww domain websites for the housing
+						- Creation and management of uww domain websites for the housing
 						department using Ingeniux CMS.
 					</span>
 				</div>
@@ -136,7 +136,7 @@ function Resume(props) {
 				<div className='resume-description-text'>
 					{/* <div className='highlight-blob'></div> */}
 					<span>
-						Troubleshooting problems and aiding students with personal account
+						- Troubleshooting problems and aiding students with personal account
 						issues in the campus system.
 					</span>
 				</div>

@@ -7,14 +7,16 @@
 }
 
 .about-me-parent {
-	max-width: 1000px;
+	/* max-width: 1000px; */
 	width: 70%;
 }
 
 .about-me-card {
 	display: flex;
 	width: 100%;
-	box-shadow: 0 0 20px -2px var(--light-black);
+	box-shadow: 0 0 8px -2px var(--light-black);
+	border-radius: 20px;
+	overflow: hidden;
 }
 
 .about-me-profile {
