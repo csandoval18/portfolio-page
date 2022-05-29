@@ -47,7 +47,7 @@
 /* .header-option > *:hover {
 	color: #82a8ee;
 } */
-.close-header-options {
+.close-header-container {
 	display: none;
 }
 
@@ -73,17 +73,35 @@
 		position: absolute;
 		left: -100%;
 		top: 0px;
-		height: fit-content;
+		height: 101vh;
 		width: 100%;
-		/* justify-content: space-around; */
 		background-color: var(--light-black);
+		opacity: 0.97;
 		z-index: 1000;
-		opacity: 0.8;
 		transition: all 0.8s ease-out;
 	}
 
+	.close-header-container {
+		display: block;
+		height: 190px;
+	}
+
 	.close-header-options {
-		height: 125px;
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		height: 60px;
+		width: 60px;
+		font-size: 50px;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		color: aliceblue;
+	}
+
+	.close-header-options:focus {
+		border: none;
+		outline: none;
 	}
 
 	.header-option-separator {
@@ -94,12 +112,15 @@
 	}
 	.header-option {
 		display: flex;
+		flex-direction: column;
+		text-align: center;
 		justify-content: center;
 		color: aliceblue;
-		padding-top: 95px;
-		/* border-top: 1px solid white; */
 		height: 212px;
 		width: 100%;
+	}
+
+	.header-option span {
 	}
 
 	.header-option:hover {
@@ -114,6 +135,5 @@
 
 	.show-hamburger-option {
 		left: 0;
-		opacity: 98.5%;
 	}
 }
