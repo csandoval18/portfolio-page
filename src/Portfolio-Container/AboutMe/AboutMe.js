@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ScreenHeading from '../../Utilities/ScreenHeading/ScreenHeading';
 import ScrollService from '../../Utilities/ScrollService';
 import Animations from '../../Utilities/Animations';
@@ -14,8 +14,13 @@ function AboutMe(props) {
 		ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
 	const SCREEN_CONSTANTS = {
-		description:
-			'Junior Full stack web developer with experience with multiple programming languages and concepts such as HTML5, CSS, JavaScript, PHP, SQL, Flutter, Firebase, OOP, data structures, and algorithms. I am a passionate learner that strives to grasp new technologies and skills to add to my personal toolbox of software development.',
+		description: `I am a junior full-stack web developer with experience in multiple programming
+      languages and concepts such as HTML5, CSS, JavaScript, PHP, SQL, Flutter, React,
+      OOP, data structures, and algorithms. I am always passionate about learning new technologies 
+      and skills to add to my personal toolbox of software development!
+      I would describe myself as a fast learner, and I am open to learn any development stacks 
+      and tools, but I have a special interest in improving with the MERN stack and 
+      Flutter + Firebase. I also hope to learn SCSS, .NET, and AWS in the near future!`,
 		highlights: {
 			bullets: [
 				'Full Stack web development',
@@ -40,7 +45,7 @@ function AboutMe(props) {
 	return (
 		<div className='about-me-container screen-container' id={props.id || ''}>
 			<div className='about-me-parent'>
-				<ScreenHeading title={'About Me'} subHeading={'Why Choose Me?'} />
+				<ScreenHeading title={'About Me'} subHeading={'My background'} />
 				<div className='about-me-card'>
 					<div className='about-me-profile'></div>
 					<div className='about-me-details'>

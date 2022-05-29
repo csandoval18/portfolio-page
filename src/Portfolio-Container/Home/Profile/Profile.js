@@ -28,7 +28,6 @@ function Profile(props) {
 					<div className='profile-details-role'>
 						<span className='type-animation'>
 							<h1>
-								{' '}
 								<TypeAnimation
 									cursor={true}
 									repeat={Infinity}
@@ -45,16 +44,18 @@ function Profile(props) {
 										1500,
 										'Flutter',
 										1500,
+										'Fast learner :) ',
+										1500,
 									]}
 								/>
 							</h1>
-							<span className='profile-role-tagline'>
-								<p>
-									University of Wisconsin - Whitewater graduate majoring in
-									Computer Science with experience building applications with
-									front end and back end capabilities.
-								</p>
-							</span>
+						</span>
+						<span className='profile-role-tagline'>
+							<p>
+								I'm Christian. A University of Wisconsin - Whitewater graduate
+								with a major in Computer Science trying to begin my career in
+								the software development industry!
+							</p>
 						</span>
 					</div>
 					<div className='profile-options'>

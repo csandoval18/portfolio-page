@@ -17,8 +17,8 @@
 	justify-content: center;
 	flex-direction: column;
 	min-height: fit-content;
-	margin: 120px 0;
-	padding-bottom: 65px;
+	margin-top: 80px;
+	padding-bottom: 60px;
 }
 
 .resume-container .separator-line {
@@ -33,7 +33,8 @@
 
 .resume-bullets {
 	height: 100%;
-	box-shadow: 15px 0 5px -15px aliceblue;
+	/* box-shadow: 15px 0 5px -15px aliceblue; */
+	border-right: solid 1px white;
 	width: 320px;
 }
 
@@ -106,6 +107,7 @@
 	z-index: 1;
 	background-color: var(--light-blue);
 	position: absolute;
+	border-radius: 12px;
 }
 
 .resume-screen-container {
@@ -227,7 +229,10 @@
 @media only screen and (max-width: 1023px) {
 	.resume-bullets {
 		height: 100%;
-		box-shadow: none;
+		/* box-shadow: none; */
+		border-right: none;
+		padding-bottom: 40px;
+		border-bottom: 1px solid aliceblue;
 		width: 320px;
 	}
 
@@ -267,6 +272,9 @@
 }
 
 @media only screen and (max-width: 700px) {
+	.resume-container {
+		padding-bottom: 20px;
+	}
 	.resume-description-text span {
 		font-size: 12px;
 	}
