@@ -1,4 +1,4 @@
-import { TOTAL_SCREENS } from './commonUtils';
+import { TOTAL_SCREENS } from './CommonUtils';
 import { Subject } from 'rxjs';
 
 export default class ScrollService {
@@ -11,7 +11,7 @@ export default class ScrollService {
 	}
 
 	scrollToContactMe = () => {
-		let contactMeScreen = document.getElementById('Contact-Me');
+		let contactMeScreen = document.getElementById('Contact Me');
 		if (!contactMeScreen) return;
 		contactMeScreen.scrollIntoView({ behavior: 'smooth' });
 	};
@@ -23,9 +23,9 @@ export default class ScrollService {
 	};
 
 	isElementInView = (elem, type) => {
-		let rec = elem.getBoundingClientRec();
-		let elementTop = rec.top;
-		let elementBottom = rec.bottom;
+		let rect = elem.getBoundingClientRect();
+		let elementTop = rect.top;
+		let elementBottom = rect.bottom;
 
 		let partiallyVisible =
 			elementTop < window.innerHeight && elementBottom >= 0;
@@ -41,8 +41,10 @@ export default class ScrollService {
 				return false;
 		}
 	};
+
 	checkCurrentScreenUnderViewport = (event) => {
-		if (!event || Object.keys(event).length < 1) return;
+		if (!event || event.length < 1) return;
+
 		for (let screen of TOTAL_SCREENS) {
 			let screenFromDOM = document.getElementById(screen.screen_name);
 			if (!screenFromDOM) continue;

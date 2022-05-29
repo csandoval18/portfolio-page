@@ -3,10 +3,8 @@
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-	height: 30%;
-	min-height: fit-content;
-	background-image: url('../../../assets/Home/bg.jpg');
-	margin: 0 20px;
+	/* min-height: 670px; */
+	padding-bottom: 100px;
 }
 
 .profile-parent {
@@ -42,7 +40,7 @@
 }
 
 .highlighted-text p {
-	color: #82a8ee;
+	color: var(--light-blue);
 	margin-left: 8px;
 	width: 115px;
 }
@@ -61,7 +59,7 @@
 	width: 500px;
 }
 
-.profile-optins {
+.profile-options {
 	margin: 30px 0 15px 0;
 }
 
@@ -69,8 +67,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* box-shadow: 0 2px 0px 0px rgb(80, 240, 187); */
-	box-shadow: 0 2px 0px 0px #82a8ee;
+	box-shadow: 2px 2px 0px 0px var(--light-blue);
 	border-radius: 6%;
 	height: 380px;
 	width: 380px;
@@ -80,7 +77,7 @@
 .profile-picture-background {
 	height: 92%;
 	width: 92%;
-	background-image: url('../../../assets/Home/profilephoto.jpg');
+	background-image: url('../../../assets/Home/homephoto.jpg');
 	background-size: cover;
 	border-radius: 6%;
 	background-repeat: no-repeat;
@@ -107,30 +104,6 @@ i {
 	transform: scale(1.2);
 }
 
-@media screen and (max-width: 1110px) {
-	.profile-picture {
-		margin: 0 0 0 80px;
-	}
-
-	.profile-details-name {
-		font-size: 18px;
-	}
-	.profile-detail-role,
-	.primary-text .highlighted-text {
-		font-size: 12px;
-	}
-
-	.highlighted-text:hover {
-		font-size: 25px;
-	}
-
-	.profile-optins .btn {
-		width: 120px;
-		padding: 11px 0;
-		z-index: 700;
-	}
-}
-
 @media screen and (max-width: 1080px) {
 	.profile-picture {
 		height: 320px;
@@ -148,7 +121,11 @@ i {
 	.colz {
 		margin-top: 30px;
 	}
-	.profile-optins {
+
+	.profile-details {
+		margin-right: 25px;
+	}
+	.profile-options {
 		display: flex;
 		justify-content: center;
 		margin-bottom: 40px;
@@ -156,9 +133,6 @@ i {
 }
 
 @media screen and (max-width: 920px) {
-	.colz {
-		margin-top: 30px;
-	}
 	.profile-picture {
 		margin: 0 !important;
 	}
@@ -168,17 +142,17 @@ i {
 		margin: 40px 0 0 0;
 	}
 
-	.profile-optins {
+	.profile-options {
 		display: flex;
 		justify-content: center;
 		margin-bottom: 30px;
 	}
 
-	.profile-detail {
-		margin: 25px 0 0 0;
+	.profile-details {
+		margin: 0px;
 	}
 
-	.profile-optins,
+	.profile-options,
 	.profile-detail-role {
 		text-align: center;
 	}
@@ -189,6 +163,12 @@ i {
 
 	.profile-role-tagline p {
 		width: fit-content;
-		margin-left: 2px;
+		padding: 0 5px 0 5px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.profile-details {
+		margin: 0px;
 	}
 }

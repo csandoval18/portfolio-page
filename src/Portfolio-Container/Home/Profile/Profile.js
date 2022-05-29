@@ -19,10 +19,10 @@ function Profile(props) {
 					</div>
 					<div className='profile-details-name'>
 						<span className='primary-text'>
-							<p>Hello, I'm</p>
+							<p>Welcome to my</p>
 						</span>
 						<span className='highlighted-text'>
-							<p>Christian</p>
+							<p>Website!</p>
 						</span>
 					</div>
 					<div className='profile-details-role'>
@@ -35,13 +35,15 @@ function Profile(props) {
 									sequence={[
 										'Junior Web Developer',
 										1500,
+										'Front-End',
+										1500,
+										'Back-End',
+										1500,
 										'LAMP Stack',
 										1500,
 										'MERN Stack',
 										1500,
-										'Mobile Development',
-										1500,
-										'Flutter + Firebase',
+										'Flutter',
 										1500,
 									]}
 								/>
@@ -50,18 +52,22 @@ function Profile(props) {
 								<p>
 									University of Wisconsin - Whitewater graduate majoring in
 									Computer Science with experience building applications with
-									front end and back end operations.
+									front end and back end capabilities.
 								</p>
 							</span>
 						</span>
 					</div>
-					<div className='profile-optins'>
+					<div className='profile-options'>
 						<button className='btn primary-btn'>
 							{''}
 							Contact Me{' '}
 						</button>
-						<a href='Resume.pdf' download='CAS_Resume.pdf'>
-							<button className='btn highlighted-btn'>Get Resume</button>
+						<a
+							className='btn highlighted-btn'
+							href='Resume.pdf'
+							download='CAS_Resume.pdf'
+						>
+							Get Resume
 						</a>
 					</div>
 				</div>
