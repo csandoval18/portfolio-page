@@ -78,7 +78,19 @@ function Header(props) {
 								: 'header-options'
 						}
 					>
-						<span className='close-header-options'>close</span>
+						<div className='close-header-container'>
+							<button
+								onClick={() => {
+									setShowHeaderOptions(!showHeaderOptions);
+									console.log(showHeaderOptions);
+								}}
+								type='button'
+								className='close-header-options'
+								aria-label='Close'
+							>
+								<span aria-hidden='true'>&times;</span>
+							</button>
+						</div>
 						{getHeaderOptions()}
 					</div>
 				</div>
