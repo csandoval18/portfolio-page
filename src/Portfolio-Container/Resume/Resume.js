@@ -9,7 +9,7 @@ function Resume(props) {
 	const [carouselOffSetStyle, setCarouselOffSetStyle] = useState({});
 
 	let fadeInScreenHandler = (screen) => {
-		if (screen.fadeScreen !== props.id) return;
+		if (screen.fadeInScreen !== props.id) return;
 		Animations.animations.fadeInScreen(props.id);
 	};
 
@@ -108,7 +108,7 @@ function Resume(props) {
 		</div>,
 		<div className='resume-screen-container' key='work-experience'>
 			<ResumeHeading
-				heading={'UWW Housing Development Services'}
+				heading={'UWW-Housing Development Services'}
 				subHeading={'Student Web Developer'}
 				fromDate={'2021'}
 				toDate={'2022'}
@@ -118,8 +118,8 @@ function Resume(props) {
 					{/* <div className='highlight-blob'></div> */}
 					<span>
 						- Development and maintanance of web applications with HTML, JQuery,
-						and MySQL. The applications were for use of residence hall front
-						desk workers, students, and staff.
+						Laravel, and MySQL. The applications were for use of residence hall
+						front desk workers, students, and staff.
 					</span>
 				</div>
 			</div>
@@ -127,8 +127,8 @@ function Resume(props) {
 				<div className='resume-description-text'>
 					{/* <div className='highlight-blob'></div> */}
 					<span>
-						- Creation and management of uww domain websites for the housing
-						department using Ingeniux CMS.
+						- Creation and management of the university's domain websites for
+						the housing department using Ingeniux CMS.
 					</span>
 				</div>
 			</div>
@@ -137,7 +137,7 @@ function Resume(props) {
 					{/* <div className='highlight-blob'></div> */}
 					<span>
 						- Troubleshooting problems and aiding students with personal account
-						issues in the campus system.
+						issues in the university system.
 					</span>
 				</div>
 			</div>
@@ -228,7 +228,10 @@ function Resume(props) {
 	};
 
 	return (
-		<div className='resume-container screen-container' id={props.id || ''}>
+		<div
+			className='resume-container screen-container fade-in'
+			id={props.id || ''}
+		>
 			<div className='resume-content'>
 				<ScreenHeading title={'Resume'} subHeading={'My Details'} />
 				<div className='resume-card'>

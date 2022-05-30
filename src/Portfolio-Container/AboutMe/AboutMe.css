@@ -3,7 +3,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* margin: 60px 0 0 0; */
+	padding: 40px 0 120px 0;
 }
 
 .about-me-parent {
@@ -14,27 +14,30 @@
 .about-me-card {
 	display: flex;
 	width: 100%;
-	box-shadow: 0 0 8px -2px var(--light-black);
+	box-shadow: 0 0 15px -2px var(--light-black);
 	border-radius: 20px;
 	overflow: hidden;
+	background-color: var(--light-black);
+	color: aliceblue;
 }
 
 .about-me-profile {
 	width: 50%;
 	background-image: url('../../assets/AboutMe/about-me.jpg');
 	background-size: cover;
+	background-position: bottom;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 .about-me-details {
 	width: 48%;
-	text-align: justify;
+	text-align: left;
 	padding: 30px;
 }
 
-.about-me-description {
-	font-size: 12px;
+.about-me-desc {
+	font-size: 14px;
 }
 
 .about-me-highlights {
@@ -93,6 +96,7 @@
 	.about-me-options {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 	}
 
 	.about-me-options .highlighted-btn-dark {
