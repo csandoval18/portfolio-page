@@ -1,5 +1,6 @@
 import React from 'react';
 import { TOTAL_SCREENS } from '../Utilities/CommonUtils';
+import Navbar from './Navbar/Navbar';
 import './PortfolioContainer.css';
 
 function PortfolioContainer(props) {
@@ -16,7 +17,12 @@ function PortfolioContainer(props) {
 			)
 		);
 	};
-	return <div className='portfolio-container'>{mapAllScreens()}</div>;
+	return (
+		<div className='portfolio-container'>
+			<Navbar />
+			{mapAllScreens()}
+		</div>
+	);
 }
 
 export default PortfolioContainer;

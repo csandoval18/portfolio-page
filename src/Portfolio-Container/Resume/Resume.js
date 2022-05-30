@@ -13,8 +13,7 @@ function Resume(props) {
 		Animations.animations.fadeInScreen(props.id);
 	};
 
-	const fadeInSubscription =
-		ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+	ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
 	const ResumeHeading = (props) => {
 		return (
@@ -92,10 +91,13 @@ function Resume(props) {
 	];
 
 	const resumeDetails = [
-		<div className='resume-screen-container' key='education'>
+		<div
+			className='resume-screen-container education-container'
+			key='education'
+		>
 			<ResumeHeading
 				heading={'University of Wisconsin - Whitewater'}
-				subHeading={'Bachelor of Science in Computer Science, GPA: 3.458'}
+				subHeading={'Bachelor of Science in Computer Science'}
 				fromDate={'2018'}
 				toDate={'2022'}
 			/>
@@ -105,6 +107,7 @@ function Resume(props) {
 				fromDate={'2014'}
 				toDate={'2018'}
 			/>
+			<br />
 		</div>,
 		<div className='resume-screen-container' key='work-experience'>
 			<ResumeHeading
@@ -115,8 +118,7 @@ function Resume(props) {
 			/>
 			<div className='experience-description'>
 				<div className='resume-description-text'>
-					{/* <div className='highlight-blob'></div> */}
-					<span>
+					<span className='we-desc'>
 						- Development and maintanance of web applications with HTML, JQuery,
 						Laravel, and MySQL. The applications were for use of residence hall
 						front desk workers, students, and staff.
@@ -125,8 +127,7 @@ function Resume(props) {
 			</div>
 			<div className='experience-description'>
 				<div className='resume-description-text'>
-					{/* <div className='highlight-blob'></div> */}
-					<span>
+					<span className='we-desc'>
 						- Creation and management of the university's domain websites for
 						the housing department using Ingeniux CMS.
 					</span>
@@ -134,8 +135,7 @@ function Resume(props) {
 			</div>
 			<div className='experience-description'>
 				<div className='resume-description-text'>
-					{/* <div className='highlight-blob'></div> */}
-					<span>
+					<span className='we-desc'>
 						- Troubleshooting problems and aiding students with personal account
 						issues in the university system.
 					</span>
@@ -149,7 +149,6 @@ function Resume(props) {
 		>
 			{programmingSkillsDetails.map((skill, index) => (
 				<div className='skill-parent' key={index}>
-					<div className='heading-bullet'></div>
 					<span>{skill.skill}</span>
 					<div className='skill-percentage'>
 						<div
@@ -160,7 +159,7 @@ function Resume(props) {
 				</div>
 			))}
 		</div>,
-		<div className='resume-screen-container' key='projects'>
+		<div className='resume-screen-container projects-container' key='projects'>
 			{projectsDetails.map((projectsDetails, index) => (
 				<ResumeHeading
 					key={index}
@@ -172,7 +171,10 @@ function Resume(props) {
 				/>
 			))}
 		</div>,
-		<div className='resume-screen-container' key='interests'>
+		<div
+			className='resume-screen-container interests-container'
+			key='interests'
+		>
 			<ResumeHeading
 				heading='Learning'
 				description='Wether it is in the workplace or in my free time, I am always eager to learn new programming techonologies as well as improving my application of algorithms and data structures to solve real world problems. My professional goal is to gain mastery of these concepts and spread my knowledge to others.'
@@ -232,8 +234,8 @@ function Resume(props) {
 			className='resume-container screen-container fade-in'
 			id={props.id || ''}
 		>
+			<ScreenHeading title={'Resume'} subHeading={'My Details'} />
 			<div className='resume-content'>
-				<ScreenHeading title={'Resume'} subHeading={'My Details'} />
 				<div className='resume-card'>
 					<div className='resume-bullets'>
 						<div className='bullet-container'>

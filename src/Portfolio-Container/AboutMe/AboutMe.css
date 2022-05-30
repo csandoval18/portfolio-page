@@ -3,7 +3,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 40px 0 120px 0;
+	margin: 40px 0 120px 0;
 }
 
 .about-me-parent {
@@ -66,8 +66,9 @@
 }
 
 .about-me-options {
-	/* display: flex; */
-	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* ipad pro responsiveness */

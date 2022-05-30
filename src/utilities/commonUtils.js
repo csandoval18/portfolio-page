@@ -1,4 +1,4 @@
-import Home from '../Portfolio-Container/Home/Home';
+import Home from '../../src/Portfolio-Container/Home/Home';
 import AboutMe from '../Portfolio-Container/AboutMe/AboutMe';
 import Resume from '../Portfolio-Container/Resume/Resume';
 import ContactMe from '../Portfolio-Container/ContactMe/ContactMe';
