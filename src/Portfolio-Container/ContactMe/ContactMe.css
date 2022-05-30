@@ -62,7 +62,7 @@ form label {
 }
 
 form textarea {
-	height: 260px;
+	height: 230px;
 }
 
 form input,
@@ -102,7 +102,7 @@ input:focus {
 }
 
 .submit-btn button:focus {
-	border: none;
+	border: solid 3px var(--light-blue);
 }
 
 .submit-btn button:active {

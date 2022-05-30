@@ -28,7 +28,7 @@ export default class ScrollService {
 		let elementBottom = rect.bottom;
 
 		let partiallyVisible =
-			elementTop < window.innerHeight && elementBottom >= 0;
+			elementTop < window.innerHeight - 1 && elementBottom >= 0;
 		let completelyVisible =
 			elementTop >= 0 && elementBottom <= window.innerHeight;
 

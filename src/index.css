@@ -163,8 +163,8 @@ body ::-webkit-scrollbar-thumb {
 
 /* ||||||||||||||||||||||| App Custom Dark Buttons ||||||||||||||||||||||| */
 .primary-btn-dark {
-	color: var(--light-black);
-	border: 2px solid var(--light-black);
+	color: aliceblue;
+	border: 2px solid aliceblue;
 	font-size: 12px;
 	margin-right: 20px;
 }
@@ -211,7 +211,7 @@ body ::-webkit-scrollbar-thumb {
 	color: white;
 	font-size: 12px;
 	background-color: var(--light-blue);
-	box-shadow: inset 0 0 0 0 var(--light-black);
+	box-shadow: inset 0 0 0 0 aliceblue;
 	transition: ease-out 0.5s;
 	border: 0px;
 }
@@ -222,10 +222,10 @@ body ::-webkit-scrollbar-thumb {
 }
 
 .highlighted-btn-dark:hover {
-	box-shadow: inset 160px 0 0 0 var(--light-black);
-	background-color: var(--light-black);
+	box-shadow: inset 160px 0 0 0 aliceblue;
+	background-color: aliceblue;
 	border: 0px;
-	color: white;
+	color: var(--light-black);
 }
 
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */

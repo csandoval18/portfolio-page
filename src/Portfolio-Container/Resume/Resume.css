@@ -17,7 +17,7 @@
 	justify-content: center;
 	flex-direction: column;
 	min-height: fit-content;
-	margin-top: 80px;
+	padding-top: 40px;
 	padding-bottom: 60px;
 }
 
@@ -28,14 +28,14 @@
 .resume-card {
 	display: flex;
 	height: 360px;
-	width: 1000px;
+	width: 1200px;
 }
 
 .resume-bullets {
 	height: 100%;
 	/* box-shadow: 15px 0 5px -15px aliceblue; */
 	border-right: solid 1px white;
-	width: 320px;
+	width: 400px;
 }
 
 .resume-bullet-details {
@@ -221,9 +221,6 @@
 	.skill-parent .heading-bullet {
 		display: none;
 	}
-
-	.resume-description-text span {
-	}
 }
 
 @media only screen and (max-width: 1023px) {
@@ -274,6 +271,7 @@
 @media only screen and (max-width: 700px) {
 	.resume-container {
 		padding-bottom: 20px;
+		padding-top: 20px;
 	}
 	.resume-description-text span {
 		font-size: 12px;
@@ -298,5 +296,9 @@
 
 	.resume-main-heading {
 		flex-wrap: nowrap;
+	}
+	.resume-bullets {
+		width: 100%;
+		padding-right: 0;
 	}
 }

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import axios from 'axios';
 import TypeAnimation from 'react-type-animation';
 import contactMeBG from '../../assets/ContactMe/contactmebg.jpg';
+import load from '../../assets/ContactMe/load.gif';
 import ScreenHeading from '../../Utilities/ScreenHeading/ScreenHeading';
 import ScrollService from '../../Utilities/ScrollService';
 import Animations from '../../Utilities/Animations';
@@ -8,7 +11,7 @@ import './ContactMe.css';
 
 function ContactMe(props) {
 	let fadeInScreenHandler = (screen) => {
-		if (screen.fadeScreen !== props.id) return;
+		if (screen.fadeInScreen !== props.id) return;
 		Animations.animations.fadeInScreen(props.id);
 	};
 
@@ -31,8 +34,33 @@ function ContactMe(props) {
 		setMessage(e.target.value);
 	};
 
+	//HTML Request
+	const submitForm = async (e) => {
+		e.preventDefault();
+		try {
+			let data = {
+				name,
+				email,
+				message,
+			};
+			setBool(true);
+			const res = axios.post(`/contact`, data);
+			if (name.length === 0 || email.length === 0 || message.length === 0) {
+				setBanner((await res).data.msg);
+				toast.error((await res).data.msg);
+				setBool(false);
+			} else if (res.status == 200) {
+				setBanner((await res).data.msg);
+				toast.success((await res).data.msg);
+				setBool(false);
+			}
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	return (
-		<div className='main-container' id={props.id || ''}>
+		<div className='main-container fade-in' id={props.id || ''}>
 			<ScreenHeading subHeading={'Send me a message'} title={'Contact Me'} />
 			<div className='central-form'>
 				<div className='row'>
@@ -48,7 +76,7 @@ function ContactMe(props) {
 					<div className='img-back'>
 						<img src={contactMeBG} alt='image not found' />
 					</div>
-					<form>
+					<form onSubmit={submitForm}>
 						<p>{banner}</p>
 						<label htmlFor='name'>Name</label>
 						<input type='text' onChange={handleName} value={name} />
@@ -58,6 +86,13 @@ function ContactMe(props) {
 						<textarea type='text' onChange={handleMessage} value={message} />
 						<div className='submit-btn'>
 							<button type='submit'>Send</button>
+							{bool ? (
+								<b className='load'>
+									<img src={load} alt='unable to load image' />
+								</b>
+							) : (
+								''
+							)}
 						</div>
 					</form>
 				</div>

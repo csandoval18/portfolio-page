@@ -6,7 +6,7 @@ import './AboutMe.css';
 
 function AboutMe(props) {
 	let fadeInScreenHandler = (screen) => {
-		if (screen.fadeScreen !== props.id) return;
+		if (screen.fadeInScreen !== props.id) return;
 		Animations.animations.fadeInScreen(props.id);
 	};
 
@@ -43,7 +43,10 @@ function AboutMe(props) {
 	};
 
 	return (
-		<div className='about-me-container screen-container' id={props.id || ''}>
+		<div
+			className='about-me-container screen-container fade-in'
+			id={props.id || ''}
+		>
 			<div className='about-me-parent'>
 				<ScreenHeading title={'About Me'} subHeading={'My background'} />
 				<div className='about-me-card'>
@@ -59,9 +62,11 @@ function AboutMe(props) {
 							{renderHighlight()}
 						</div>
 						<div className='about-me-options'>
-							<button className='btn primary-btn-dark'>
-								{''}
-								Contact Me{' '}
+							<button
+								className='btn primary-btn-dark'
+								onClick={() => ScrollService.scrollHandler.scrollToContactMe()}
+							>
+								Contact Me
 							</button>
 							<a
 								className='btn highlighted-btn-dark'
