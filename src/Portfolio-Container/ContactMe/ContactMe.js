@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { toast } from 'react-toastify';
-import axios from 'axios';
 import TypeAnimation from 'react-type-animation';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import contactMeBG from '../../assets/ContactMe/contactmebg.jpg';
 import load from '../../assets/ContactMe/load.gif';
 import ScreenHeading from '../../Utilities/ScreenHeading/ScreenHeading';
@@ -15,8 +17,7 @@ function ContactMe(props) {
 		Animations.animations.fadeInScreen(props.id);
 	};
 
-	const fadeInSubscription =
-		ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+	ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
@@ -34,28 +35,38 @@ function ContactMe(props) {
 		setMessage(e.target.value);
 	};
 
+	console.log(message);
+
 	//HTML Request
 	const submitForm = async (e) => {
 		e.preventDefault();
+		console.log('flag');
 		try {
 			let data = {
 				name,
 				email,
 				message,
 			};
+			console.log(data);
 			setBool(true);
-			const res = axios.post(`/contact`, data);
+			const res = await axios.post('/contact', data);
+
 			if (name.length === 0 || email.length === 0 || message.length === 0) {
-				setBanner((await res).data.msg);
-				toast.error((await res).data.msg);
+				setBanner(res.data.msg);
+				toast.error(res.data.msg);
 				setBool(false);
-			} else if (res.status == 200) {
-				setBanner((await res).data.msg);
-				toast.success((await res).data.msg);
+			} else if (res.status === 200) {
+				setBanner(res.data.msg);
+				toast.success(res.data.msg);
 				setBool(false);
+
+				//reset inputs vars
+				setName('');
+				setEmail('');
+				setMessage('');
 			}
 		} catch (error) {
-			console.log(error);
+			console.log('Error: ' + error);
 		}
 	};
 
@@ -74,7 +85,7 @@ function ContactMe(props) {
 				</div>
 				<div className='back-form'>
 					<div className='img-back'>
-						<img src={contactMeBG} alt='image not found' />
+						<img src={contactMeBG} alt='unable to load' />
 					</div>
 					<form onSubmit={submitForm}>
 						<p>{banner}</p>
@@ -85,10 +96,11 @@ function ContactMe(props) {
 						<label htmlFor='message'>Message</label>
 						<textarea type='text' onChange={handleMessage} value={message} />
 						<div className='submit-btn'>
+							<ToastContainer />
 							<button type='submit'>Send</button>
 							{bool ? (
 								<b className='load'>
-									<img src={load} alt='unable to load image' />
+									<img src={load} alt='unable to load' />
 								</b>
 							) : (
 								''
